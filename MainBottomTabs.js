@@ -34,6 +34,7 @@ import Success from './screen/send/success';
 
 import ManageFunds from './screen/lnd/manageFunds';
 import ScanLndInvoice from './screen/lnd/scanLndInvoice';
+import LappBrowser from './screen/lnd/browser';
 
 const ReorderWalletsStackNavigator = createStackNavigator({
   ReorderWallets: {
@@ -183,6 +184,10 @@ const MainBottomTabs = createStackNavigator(
     ScanQrAddress: {
       screen: sendScanQrAddress,
     },
+    LappBrowser: {
+      screen: LappBrowser,
+    },
+
     ReorderWallets: {
       screen: ReorderWalletsStackNavigator,
       navigationOptions: {

@@ -63,7 +63,7 @@ export default class Browser extends Component {
 
         <WebView
           ref={ref => (this.webview = ref)}
-          source={{ uri: 'http://138.68.146.115:3456' }}
+          source={{ uri: 'https://bluewallet.io/marketplace/' }}
           onMessage={e => {
             console.log('-------------onMessage', e.nativeEvent);
             let json = false;

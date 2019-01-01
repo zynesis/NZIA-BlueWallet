@@ -139,6 +139,28 @@ export default class Browser extends Component {
 
 
 
+							//////////////////////////////////
+							//////////////////////////////////
+							//////////////////////////////////
+
+
+							var aTags = document.getElementsByTagName("a");
+							var searchText = "lightning:lnbc";
+							var found;
+
+							for (var i = 0; i < aTags.length; i++) {
+							  let href = aTags[i].getAttribute('href') + '';
+							  if (href.indexOf(searchText) === 0) {
+							    found = aTags[i];
+							    // alert('found ' + aTags[i].value);
+							    window.postMessage(JSON.stringify({pay:href.replace('lightning:', '')}));
+							    found.replaceWith('Invoice intercepted by BlueWallet');
+							    break;
+							  }
+							}
+
+
+
 
 
 

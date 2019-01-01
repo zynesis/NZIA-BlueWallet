@@ -165,6 +165,8 @@ module.exports = {
       title: 'Partilhar este endereço com o pagador',
       share: 'partilhar',
       copiedToClipboard: 'copiado para clip board',
+      label: 'Description',
+      setAmount: 'Receive with amount',
     },
   },
   settings: {
@@ -208,5 +210,6 @@ module.exports = {
     refill_lnd_balance: 'Carregar o saldo da Lightning wallet',
     refill: 'Carregar',
     withdraw: 'Transferir',
+    expired: 'Expired',
   },
 };

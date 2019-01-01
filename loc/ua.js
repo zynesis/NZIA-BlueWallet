@@ -159,6 +159,8 @@ module.exports = {
       title: 'Покажіть цю адресу платникові',
       share: 'Відправити',
       copiedToClipboard: 'Зкопіювано',
+      label: 'Description',
+      setAmount: 'Receive with amount',
     },
   },
   buyBitcoin: {
@@ -209,5 +211,6 @@ module.exports = {
     refill_lnd_balance: 'Збільшити баланс Lightning гаманця',
     refill: 'Поповнити',
     withdraw: 'Вивести',
+    expired: 'Expired',
   },
 };

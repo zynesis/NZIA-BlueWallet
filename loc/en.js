@@ -72,9 +72,9 @@ module.exports = {
     import: {
       title: 'import',
       explanation:
-        "Write here you mnemonic, private key, WIF, or anything you've got. BlueWallet will do its best to guess the correct format and import your wallet",
+        "Write here your mnemonic, private key, WIF, or anything you've got. BlueWallet will do its best to guess the correct format and import your wallet",
       imported: 'Imported',
-      error: 'Failed to import. Is it event valid?',
+      error: 'Failed to import. Please, make sure that the provided data is valid.',
       success: 'Success',
       do_import: 'Import',
       scan_qr: 'or scan QR code instead?',
@@ -159,6 +159,8 @@ module.exports = {
       title: 'Share this address with payer',
       share: 'share',
       copiedToClipboard: 'Copied to clipboard.',
+      label: 'Description',
+      setAmount: 'Receive with amount',
     },
   },
   buyBitcoin: {
@@ -185,7 +187,7 @@ module.exports = {
     help:
       'Under certain circumstances, you might be forced to disclose a ' +
       'password. To keep your coins safe, BlueWallet can create another ' +
-      'encrypted storage, with a different password. Under the pressure, ' +
+      'encrypted storage, with a different password. Under pressure, ' +
       'you can disclose this password to a 3rd party. If entered in ' +
       "BlueWallet, it will unlock new 'fake' storage. This will seem " +
       'legit to a 3rd party, but will secretly keep your main storage ' +
@@ -206,5 +208,6 @@ module.exports = {
     refill_lnd_balance: 'Refill Lightning wallet balance',
     refill: 'Refill',
     withdraw: 'Withdraw',
+    expired: 'Expired',
   },
 };

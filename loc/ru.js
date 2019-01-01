@@ -164,6 +164,8 @@ module.exports = {
       title: 'Покажите этот адрес плательщику',
       share: 'Отправить',
       copiedToClipboard: 'скопировано',
+      label: 'Description',
+      setAmount: 'Receive with amount',
     },
   },
   settings: {
@@ -209,5 +211,6 @@ module.exports = {
     refill_lnd_balance: 'Пополнить баланс Lightning кошелька',
     refill: 'Пополнить',
     withdraw: 'Вывести',
+    expired: 'Expired',
   },
 };

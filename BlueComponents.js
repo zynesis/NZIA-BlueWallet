@@ -1,6 +1,7 @@
 /** @type {AppStorage} */
 import React, { Component } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import PropTypes from 'prop-types';
 import { Icon, Button, FormLabel, FormInput, Text, Header, List, ListItem } from 'react-native-elements';
 import {
   TouchableOpacity,
@@ -24,6 +25,7 @@ import { HDLegacyP2PKHWallet } from './class/hd-legacy-p2pkh-wallet';
 import { HDLegacyBreadwalletWallet } from './class/hd-legacy-breadwallet-wallet';
 import { HDSegwitP2SHWallet } from './class/hd-segwit-p2sh-wallet';
 import { LightningCustodianWallet } from './class/lightning-custodian-wallet';
+import { BitcoinUnit } from './models/bitcoinUnits';
 let loc = require('./loc/');
 /** @type {AppStorage} */
 let BlueApp = require('./BlueApp');
@@ -534,6 +536,12 @@ const stylesBlueIcon = StyleSheet.create({
     backgroundColor: '#d2f8d6',
     transform: [{ rotate: '-45deg' }],
   },
+  ballIncommingWithoutRotate: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: '#d2f8d6',
+  },
   ballReceive: {
     width: 30,
     height: 30,
@@ -547,6 +555,12 @@ const stylesBlueIcon = StyleSheet.create({
     borderRadius: 15,
     backgroundColor: '#f8d2d2',
     transform: [{ rotate: '225deg' }],
+  },
+  ballOutgoingWithoutRotate: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: '#f8d2d2',
   },
   ballTransparrent: {
     width: 30,
@@ -620,6 +634,20 @@ export class BlueTransactionPendingIcon extends Component {
   }
 }
 
+export class BlueTransactionExpiredIcon extends Component {
+  render() {
+    return (
+      <View {...this.props}>
+        <View style={stylesBlueIcon.boxIncomming}>
+          <View style={stylesBlueIcon.ballOutgoingWithoutRotate}>
+            <Icon {...this.props} name="hourglass-end" size={16} type="font-awesome" color="#d0021b" iconStyle={{ left: 0, top: 6 }} />
+          </View>
+        </View>
+      </View>
+    );
+  }
+}
+
 export class BlueTransactionOnchainIcon extends Component {
   render() {
     return (
@@ -646,15 +674,8 @@ export class BlueTransactionOffchainIcon extends Component {
     return (
       <View {...this.props}>
         <View style={stylesBlueIcon.boxIncomming}>
-          <View style={stylesBlueIcon.ballOutgoing}>
-            <Icon
-              {...this.props}
-              name="bolt"
-              size={16}
-              type="font-awesome"
-              color="#d0021b"
-              iconStyle={{ left: 0, top: 7, transform: [{ rotate: '155deg' }] }}
-            />
+          <View style={stylesBlueIcon.ballOutgoingWithoutRotate}>
+            <Icon {...this.props} name="bolt" size={16} type="font-awesome" color="#d0021b" iconStyle={{ left: 0, top: 7 }} />
           </View>
         </View>
       </View>
@@ -667,15 +688,8 @@ export class BlueTransactionOffchainIncomingIcon extends Component {
     return (
       <View {...this.props}>
         <View style={stylesBlueIcon.boxIncomming}>
-          <View style={stylesBlueIcon.ballIncomming}>
-            <Icon
-              {...this.props}
-              name="bolt"
-              size={16}
-              type="font-awesome"
-              color="#37c0a1"
-              iconStyle={{ left: 0, top: 7, transform: [{ rotate: '45deg' }] }}
-            />
+          <View style={stylesBlueIcon.ballIncommingWithoutRotate}>
+            <Icon {...this.props} name="bolt" size={16} type="font-awesome" color="#37c0a1" iconStyle={{ left: 0, top: 7 }} />
           </View>
         </View>
       </View>
@@ -1097,6 +1111,57 @@ export class WalletsCarousel extends Component {
           console.log('snapped to card #', index);
         }}
       />
+    );
+  }
+}
+
+export class BlueBitcoinAmount extends Component {
+  static propTypes = {
+    isLoading: PropTypes.bool,
+    amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    onChangeText: PropTypes.func,
+    disabled: PropTypes.bool,
+  };
+
+  render() {
+    const amount = typeof this.props.amount === 'number' ? this.props.amount.toString() : this.props.amount;
+
+    return (
+      <View>
+        <View style={{ flexDirection: 'row', justifyContent: 'center', paddingTop: 16, paddingBottom: 16 }}>
+          <TextInput
+            keyboardType="numeric"
+            onChangeText={text => this.props.onChangeText(text.replace(',', '.'))}
+            placeholder="0"
+            maxLength={10}
+            editable={!this.props.isLoading && !this.props.disabled}
+            value={amount}
+            placeholderTextColor={this.props.disabled ? '#99a0ab' : '#0f5cc0'}
+            style={{
+              color: this.props.disabled ? '#99a0ab' : '#0f5cc0',
+              fontSize: 36,
+              fontWeight: '600',
+            }}
+          />
+          <Text
+            style={{
+              color: this.props.disabled ? '#99a0ab' : '#0f5cc0',
+              fontSize: 16,
+              marginHorizontal: 4,
+              paddingBottom: 6,
+              fontWeight: '600',
+              alignSelf: 'flex-end',
+            }}
+          >
+            {' ' + BitcoinUnit.BTC}
+          </Text>
+        </View>
+        <View style={{ alignItems: 'center', marginBottom: 22, marginTop: 4 }}>
+          <Text style={{ fontSize: 18, color: '#d4d4d4', fontWeight: '600' }}>
+            {loc.formatBalance(amount || 0, BitcoinUnit.LOCAL_CURRENCY)}
+          </Text>
+        </View>
+      </View>
     );
   }
 }

@@ -100,19 +100,26 @@ export default class Browser extends Component {
             this.webview.injectJavaScript(' window.postMessage("this is from postmessage"); void(0);');
 
             this.webview.injectJavaScript(`
+
+            lastTimeTriedToPay = 0;
+            function tryToPay(invoice) {
+              if (+new Date() - lastTimeTriedToPay >= 3000) {
+                window.postMessage(JSON.stringify({pay:invoice}));
+                lastTimeTriedToPay = +new Date();
+              }
+            }
+
+
+
 	          setInterval(function(){
 
+	            var searchText = "lnbc";
+
 	            var aTags = document.getElementsByTagName("span");
-
-							var searchText = "lnbc";
-							var found;
-
 							for (var i = 0; i < aTags.length; i++) {
 							  if (aTags[i].textContent.indexOf(searchText) === 0) {
-							    found = aTags[i];
-							    // alert('found ' + aTags[i].textContent);
-							    window.postMessage(JSON.stringify({pay:aTags[i].textContent}));
-							    found.replaceWith('Invoice intercepted by BlueWallet');
+							    tryToPay(aTags[i].textContent);
+							    aTags[i].replaceWith('Invoice intercepted by BlueWallet');
 							    break;
 							  }
 							}
@@ -124,15 +131,11 @@ export default class Browser extends Component {
 
 
 							var aTags = document.getElementsByTagName("input");
-							var searchText = "lnbc";
-							var found;
 
 							for (var i = 0; i < aTags.length; i++) {
 							  if (aTags[i].value.indexOf(searchText) === 0) {
-							    found = aTags[i];
-							    // alert('found ' + aTags[i].value);
-							    window.postMessage(JSON.stringify({pay:aTags[i].value}));
-							    found.replaceWith('Invoice intercepted by BlueWallet');
+							    tryToPay(aTags[i].value);
+							    aTags[i].replaceWith('Invoice intercepted by BlueWallet');
 							    break;
 							  }
 							}
@@ -146,15 +149,12 @@ export default class Browser extends Component {
 
 							var aTags = document.getElementsByTagName("a");
 							var searchText = "lightning:lnbc";
-							var found;
 
 							for (var i = 0; i < aTags.length; i++) {
 							  let href = aTags[i].getAttribute('href') + '';
 							  if (href.indexOf(searchText) === 0) {
-							    found = aTags[i];
-							    // alert('found ' + aTags[i].value);
-							    window.postMessage(JSON.stringify({pay:href.replace('lightning:', '')}));
-							    found.replaceWith('Invoice intercepted by BlueWallet');
+							    tryToPay(href.replace('lightning:', ''));
+							    aTags[i].replaceWith('Invoice intercepted by BlueWallet');
 							    break;
 							  }
 							}

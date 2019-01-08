@@ -23,7 +23,7 @@ module.exports = {
       latest_transaction: 'poslední transakce',
       empty_txs1: 'Zde budou zobrazeny vaše transakce,',
       empty_txs2: 'zatím žádné',
-      tap_here_to_buy: 'Klikněte zde pro zakoupení DBD',
+      tap_here_to_buy: 'Klikněte zde pro zakoupení DGD',
     },
     reorder: {
       title: 'Seřadit peěženky',
@@ -43,7 +43,7 @@ module.exports = {
       imported: 'Importována',
       coming_soon: 'Již brzy',
       lightning: 'Lightning',
-      bitcoin: 'DBD',
+      bitcoin: 'DGD',
     },
     details: {
       title: 'Peněženka',
@@ -59,7 +59,7 @@ module.exports = {
       save: 'Uložit',
       delete_this_wallet: 'Smazat peněženku',
       export_backup: 'Exportovat / zálohovat',
-      buy_bitcoin: 'Koupit DBD',
+      buy_bitcoin: 'Koupit DGD',
       show_xpub: 'Ukázat XPUB',
     },
     export: {
@@ -121,8 +121,8 @@ module.exports = {
       total_exceeds_balance: 'Částka, kterou se snažíte poslat, přesahuje dostupný zůstatek.',
       create_tx_error: 'Nastala chyba při vytváření transakce. Prosím ujistěte se, že adresa je platná.',
       address: 'adresa',
-      amount_placeholder: 'částka k odeslání (v DBD)',
-      fee_placeholder: 'plus transakční poplatek (v DBD)',
+      amount_placeholder: 'částka k odeslání (v DGD)',
+      fee_placeholder: 'plus transakční poplatek (v DGD)',
       note_placeholder: 'poznámka pro sebe',
       cancel: 'Zrušit',
       scan: 'Skenovat',
@@ -164,7 +164,7 @@ module.exports = {
     },
   },
   buyBitcoin: {
-    header: 'Koupit DBD',
+    header: 'Koupit DGD',
     tap_your_address: 'Klikněte na svojí adresu pro zkopírování do schránky:',
     copied: 'Zkopírováno do schránky.',
   },

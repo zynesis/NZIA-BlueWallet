@@ -144,7 +144,7 @@ export default class RBF extends Component {
           <BlueFormInput
             onChangeText={text => this.setState({ feeDelta: text })}
             keyboardType={'numeric'}
-            placeholder={'fee to add (in DBD)'}
+            placeholder={'fee to add (in DGD)'}
             value={this.state.feeDelta + ''}
           />
         </BlueCard>

@@ -15,7 +15,7 @@ module.exports = {
     list: {
       app_name: 'Blue Wallet',
       title: 'wallets',
-      header: 'Uma wallet representa um par entre um segredo (chave privada) e um endereço' + 'que pode partilhar para receber DBD.',
+      header: 'Uma wallet representa um par entre um segredo (chave privada) e um endereço' + 'que pode partilhar para receber DGD.',
       add: 'adicionar wallet',
       create_a_wallet: 'Adicionar uma wallet',
       create_a_wallet1: 'É gratuito e pode',
@@ -23,7 +23,7 @@ module.exports = {
       latest_transaction: 'últimas transacções',
       empty_txs1: 'As suas transacções aparecerão aqui,',
       empty_txs2: 'nenhuma de momento',
-      tap_here_to_buy: 'Tap here to buy DBD',
+      tap_here_to_buy: 'Tap here to buy DGD',
     },
     reorder: {
       title: 'Reorder Wallets',
@@ -43,7 +43,7 @@ module.exports = {
       imported: 'Importada',
       coming_soon: 'Brevemente',
       lightning: 'Lightning',
-      bitcoin: 'DBD',
+      bitcoin: 'DGD',
     },
     details: {
       title: 'wallet',
@@ -59,7 +59,7 @@ module.exports = {
       no_cancel: 'Não, cancelar',
       delete_this_wallet: 'Apagar esta wallet',
       export_backup: 'Exportar / backup',
-      buy_bitcoin: 'Buy DBD',
+      buy_bitcoin: 'Buy DGD',
       show_xpub: 'Show wallet XPUB',
     },
     export: {
@@ -126,8 +126,8 @@ module.exports = {
       fee_field_is_not_valid: 'Campo de taxa não é válido',
       address_field_is_not_valid: 'Campo de endereço não é válido',
       receiver_placeholder: 'endereço de envio aqui',
-      amount_placeholder: 'quantia a enviar (em DBD)',
-      fee_placeholder: 'mais a taxa de transacção (em DBD)',
+      amount_placeholder: 'quantia a enviar (em DGD)',
+      fee_placeholder: 'mais a taxa de transacção (em DGD)',
       create_tx_error: 'There was an error creating the transaction. Please, make sure the address is valid.',
       note_placeholder: 'Nota pessoal',
       total_exceeds_balance: 'Total amount exceeds available balance.',
@@ -155,7 +155,7 @@ module.exports = {
     },
   },
   buyBitcoin: {
-    header: 'Buy DBD',
+    header: 'Buy DGD',
     tap_your_address: 'Tap your address to copy it to clipboard:',
     copied: 'Copied to Clipboard!',
   },

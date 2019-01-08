@@ -23,7 +23,7 @@ module.exports = {
       latest_transaction: 'latest transaction',
       empty_txs1: 'Your transactions will appear here,',
       empty_txs2: 'none at the moment',
-      tap_here_to_buy: 'Tap here to buy DBD',
+      tap_here_to_buy: 'Tap here to buy DGD',
     },
     reorder: {
       title: 'Reorder Wallets',
@@ -43,7 +43,7 @@ module.exports = {
       imported: 'Imported',
       coming_soon: 'Coming soon',
       lightning: 'Lightning',
-      bitcoin: 'DBD',
+      bitcoin: 'DGD',
     },
     details: {
       title: 'Wallet',
@@ -59,7 +59,7 @@ module.exports = {
       save: 'Save',
       delete_this_wallet: 'Delete this wallet',
       export_backup: 'Export / backup',
-      buy_bitcoin: 'Buy DBD',
+      buy_bitcoin: 'Buy DGD',
       show_xpub: 'Show wallet XPUB',
     },
     export: {
@@ -121,8 +121,8 @@ module.exports = {
       total_exceeds_balance: 'The sending amount exceeds the available balance.',
       create_tx_error: 'There was an error creating the transaction. Please, make sure the address is valid.',
       address: 'address',
-      amount_placeholder: 'amount to send (in DBD)',
-      fee_placeholder: 'plus transaction fee (in DBD)',
+      amount_placeholder: 'amount to send (in DGD)',
+      fee_placeholder: 'plus transaction fee (in DGD)',
       note_placeholder: 'note to self',
       cancel: 'Cancel',
       scan: 'Scan',
@@ -164,7 +164,7 @@ module.exports = {
     },
   },
   buyBitcoin: {
-    header: 'Buy DBD',
+    header: 'Buy DGD',
     tap_your_address: 'Tap your address to copy it to clipboard:',
     copied: 'Copied to Clipboard!',
   },

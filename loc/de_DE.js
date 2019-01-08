@@ -16,7 +16,7 @@ module.exports = {
       app_name: 'Blue Wallet',
       title: 'Wallets',
       header:
-        'Eine Wallet (Brieftasche) spiegelt ein Paar von kryptographischen Schlüssel wider. Einen geheimen und eine Adresse als öffentlichen Schlüssel. Letztern kann man zum Erhalt von DBD teilen.',
+        'Eine Wallet (Brieftasche) spiegelt ein Paar von kryptographischen Schlüssel wider. Einen geheimen und eine Adresse als öffentlichen Schlüssel. Letztern kann man zum Erhalt von DGD teilen.',
       add: 'Wallet hinzufügen',
       create_a_wallet: 'Wallet erstellen',
       create_a_wallet1: 'Es ist kostenlos und du kannst',
@@ -24,7 +24,7 @@ module.exports = {
       latest_transaction: 'Lezte Transaktion',
       empty_txs1: 'Deine Transaktionen erscheinen hier',
       empty_txs2: 'Noch keine Transaktionen',
-      tap_here_to_buy: 'Klicke hier, um DBD zu kaufen',
+      tap_here_to_buy: 'Klicke hier, um DGD zu kaufen',
     },
     reorder: {
       title: 'Wallets neu ordnen',
@@ -44,7 +44,7 @@ module.exports = {
       imported: 'Importiert',
       coming_soon: 'Folgt bald',
       lightning: 'Lightning',
-      bitcoin: 'DBD',
+      bitcoin: 'DGD',
     },
     details: {
       title: 'Wallet',
@@ -60,7 +60,7 @@ module.exports = {
       save: 'Sichern',
       delete_this_wallet: 'Lösche diese Wallet',
       export_backup: 'Exportieren / Backup',
-      buy_bitcoin: 'DBD kaufen',
+      buy_bitcoin: 'DGD kaufen',
       show_xpub: 'Wallet XPUB zeigen',
     },
     export: {
@@ -122,8 +122,8 @@ module.exports = {
       total_exceeds_balance: 'Der zu sendende Betrag ist größer als der verfügbare Betrag.',
       create_tx_error: 'Fehler beim Erstellen der Transaktion. Bitte stelle sicher, dass die Adresse valide ist.',
       address: 'Adresse',
-      amount_placeholder: 'Betrag (in DBD)',
-      fee_placeholder: 'plus Gebühr (in DBD)',
+      amount_placeholder: 'Betrag (in DGD)',
+      fee_placeholder: 'plus Gebühr (in DGD)',
       note_placeholder: 'Notiz',
       cancel: 'Abbrechen',
       scan: 'Scan',
@@ -165,7 +165,7 @@ module.exports = {
     },
   },
   buyBitcoin: {
-    header: 'Kaufe DBD',
+    header: 'Kaufe DGD',
     tap_your_address: 'Adresse antippen, um sie in die Zwischenablage zu kopieren:',
     copied: 'In die Zwischenablage kopiert!',
   },
@@ -187,7 +187,7 @@ module.exports = {
     title: 'Glaubhafte Abstreitbarkeit',
     help:
       'Unter bestimmten Umständen könntest du dazu gezwungen werden, ' +
-      'dein Passwort preiszugeben. Um deine DBD zu sichern, kann ' +
+      'dein Passwort preiszugeben. Um deine DGD zu sichern, kann ' +
       'BlueWallet einen weiteren verschlüsselten Speicher mit einem ' +
       'anderen Passwort erstellen. Unter äußeren Druck kannst du das ' +
       'zweite Passwort an Fremde weitergeben. Wenn eingegeben, öffnet ' +

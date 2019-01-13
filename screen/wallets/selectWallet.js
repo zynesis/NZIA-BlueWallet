@@ -98,10 +98,10 @@ export default class SelectWallet extends Component {
               }
               style={{
                 width: 99,
-                height: 94,
+                height: 56,
                 position: 'absolute',
                 bottom: 0,
-                right: 0,
+                right: 10,
               }}
             />
 

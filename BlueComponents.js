@@ -1037,10 +1037,10 @@ export class WalletsCarousel extends Component {
               source={(LightningCustodianWallet.type === item.type && require('./img/lnd-shape.png')) || require('./img/dbd-shape.png')}
               style={{
                 width: 99,
-                height: 94,
+                height: 56,
                 position: 'absolute',
                 bottom: 0,
-                right: 0,
+                right: 10,
               }}
             />
 

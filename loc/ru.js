@@ -23,7 +23,7 @@ module.exports = {
       latest_transaction: 'последняя транзакция',
       empty_txs1: 'Список транзакций пока пуст',
       empty_txs2: ' ',
-      tap_here_to_buy: 'Tap here to buy DGD',
+      tap_here_to_buy: 'Tap here to buy DBD',
     },
     reorder: {
       title: 'Reorder Wallets',
@@ -43,7 +43,7 @@ module.exports = {
       imported: 'Импортирован',
       coming_soon: 'Пока недоступно',
       lightning: 'Lightning',
-      bitcoin: 'DGD',
+      bitcoin: 'DBD',
     },
     details: {
       title: 'Информация о Кошельке',
@@ -59,7 +59,7 @@ module.exports = {
       no_cancel: 'Нет, отмена',
       delete_this_wallet: 'Удалить этот кошелек',
       export_backup: 'Экспорт / резервная копия',
-      buy_bitcoin: 'Buy DGD',
+      buy_bitcoin: 'Buy DBD',
       show_xpub: 'Show wallet XPUB',
     },
     export: {
@@ -125,8 +125,8 @@ module.exports = {
       fee_field_is_not_valid: 'Поле `комиссия` не валидно',
       address_field_is_not_valid: 'Поле `адрес` не валидно',
       receiver_placeholder: 'Адрес получателя',
-      amount_placeholder: 'сколько отправить (в DGD)',
-      fee_placeholder: 'плюс комиссия за перевод (в DGD)',
+      amount_placeholder: 'сколько отправить (в DBD)',
+      fee_placeholder: 'плюс комиссия за перевод (в DBD)',
       note_placeholder: 'примечание платежа',
       create_tx_error: 'There was an error creating the transaction. Please, make sure the address is valid.',
       cancel: 'Отмена',
@@ -154,7 +154,7 @@ module.exports = {
     },
   },
   buyBitcoin: {
-    header: 'Buy DGD',
+    header: 'Buy DBD',
     tap_your_address: 'Tap your address to copy it to clipboard:',
     copied: 'Copied to Clipboard!',
   },

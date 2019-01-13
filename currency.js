@@ -109,7 +109,7 @@ function BTCToLocalCurrency(bitcoin) {
 function satoshiToBTC(satoshi) {
   let b = new BigNumber(satoshi);
   b = b.dividedBy(100000000);
-  return b.toString(10) + ' DGD';
+  return b.toString(10) + ' DBD';
 }
 
 module.exports.updateExchangeRate = updateExchangeRate;

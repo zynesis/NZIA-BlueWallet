@@ -91,7 +91,12 @@ export class BitcoinButton extends Component {
           }}
         >
           <View style={{ paddingTop: 30 }}>
-            <Icon name="coin" size={32} type="material-community" color={(this.props.active && BlueApp.settings.foregroundColor) || '#d2d2d2'} />
+            <Icon
+              name="coin"
+              size={32}
+              type="material-community"
+              color={(this.props.active && BlueApp.settings.foregroundColor) || '#d2d2d2'}
+            />
             <Text style={{ textAlign: 'center', color: (this.props.active && BlueApp.settings.foregroundColor) || '#d2d2d2' }}>
               {loc.wallets.add.bitcoin}
             </Text>
